@@ -1,0 +1,214 @@
+.worksans {
+    font-family: "Work Sans", sans-serif;
+}
+
+#menu-toggle:checked+#menu {
+    display: block;
+}
+
+.hover\:grow {
+    transition: all 0.3s;
+    transform: scale(1);
+}
+
+.hover\:grow:hover {
+    transform: scale(1.02);
+}
+
+.carousel-open:checked+.carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+#carousel-1:checked~.control-1,
+#carousel-2:checked~.control-2,
+#carousel-3:checked~.control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    content: "autoplay";
+}
+
+#carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #000;
+    /*Set to match the Tailwind colour you want the active one to be */
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.modal {
+    transition: opacity 0.25s ease;
+}
+
+body.modal-active {
+    overflow-x: hidden;
+    overflow-y: visible !important;
+}
+
+.preview {
+    width: 100%;
+}
+
+.row-lightbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.row-lightbox>.col-lightbox {
+    padding: 0 8px;
+}
+
+.col-lightbox {
+    float: left;
+    width: 25%;
+}
+
+.modal-lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding: 10px 62px 0px 62px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: auto;
+    width: 40%;
+    margin-top: 30px;
+    /* max-width: 1200px; */
+}
+
+.slide {
+    display: none;
+}
+
+.image-slide {
+    width: 100%;
+}
+
+.modal-preview {
+    width: 100%;
+}
+
+.dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+img.preview,
+img.modal-preview {
+    opacity: 0.6;
+}
+
+img.active,
+.preview:hover,
+.modal-preview:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mundur,
+.maju {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.maju {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.mundur:hover,
+.maju:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 560px) {
+    .modal-content {
+        width: 90%;
+        margin-top: 25%;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+.font-family-karla {
+    font-family: karla;
+}
